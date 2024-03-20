@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--对应dao层接口文件的目录-->
+<mapper namespace="com.springboot.userlogin.springbootdemo.dao.UserDao">
+    <!--  id值为UserDao接口方法名； -->
+    <select id="getUserByMassage" resultType="java.lang.Integer">
+        SELECT count(id) FROM easyUser
+        WHERE email=#{email} AND password=#{password}
+    </select>
+</mapper>
